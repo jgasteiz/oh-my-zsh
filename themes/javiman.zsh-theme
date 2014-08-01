@@ -1,7 +1,9 @@
-PROMPT='$(_user_host)${_current_dir} $(git_prompt_info)%{$reset_color%}
-λ '
+PROMPT=' $(_user_host)${_current_dir} $(git_prompt_info)%{$reset_color%}
+${_lambda} '
 
 local _current_dir="%{$fg[blue]%}%3~%{$reset_color%} "
+
+local _lambda=" $FG[154]λ%{$reset_color%}"
 
 function _user_host() {
   if [[ -n $SSH_CONNECTION ]]; then
